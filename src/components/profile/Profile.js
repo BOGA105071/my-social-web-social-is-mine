@@ -1,28 +1,25 @@
 import React from 'react'
-import profilepicture from "../../img/profilepicture.jpg"
 import postpicture from "../../img/profilepicture_min.jpg"
 import "./profile.css"
+import Posts from './posts/Posts'
+import ProfileInfo from './profileInfo/ProfileInfo'
 
-function Profile() {
+
+
+function Profile(props) {
   return (
 
     <div className="profile">
-      <div className="me">
-        <img src={profilepicture} alt="profile mini photo cute cat" />
-        <p>Богдан Граур</p>
-      </div>
-      <div className="posts">
-        <input placeholder='enter the post' />
-        <button>Add post</button>
-        <div className='post'>
-          <img src={postpicture} alt="cute cat but smaller" />
-          <span>Graur Bogdan</span>
-          <p>Some text</p>
-        </div>
-      </div>
+      <ProfileInfo />
+      <Posts commentItems={props.commentItems.postsData} addPost={props.addPost}/>
     </div>
+
 
   )
 }
 
 export default Profile
+
+
+
+

@@ -1,13 +1,13 @@
 import React from "react"
 import './header.css'
-import profilepicture from "../../img/profilepicture.jpg"
+import logo from "../../img/ylogo.jpg"
 
 
 function Header() {
   return (
 
     <div className="header">
-      <img src={profilepicture} />
+      <img src={logo} />
     </div>
 
   )
